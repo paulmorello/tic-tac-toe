@@ -8,25 +8,25 @@
 <body>
 
   <header>
-    <div class="display"></div>
+    <div class="display">Let's Play!</div>
   </header>
 
   <div id="game-board">
     <table>
       <tr>
-        <th id="a">x</th>
-        <th id="b">x</th>
-        <th id="c">o</th>
+        <th class="square"></th>
+        <th class="square"></th>
+        <th class="square"></th>
       </tr>
       <tr>
-        <td id="d">x</td>
-        <td id="e">o</td>
-        <td id="f">x</td>
+        <td class="square"></td>
+        <td class="square"></td>
+        <td class="square"></td>
       </tr>
       <tr>
-        <td id="g">o</td>
-        <td id="h">x</td>
-        <td id="i">x</td>
+        <td class="square"></td>
+        <td class="square"></td>
+        <td class="square"></td>
       </tr>
     </table>
   </div>
@@ -35,23 +35,24 @@
     <div class="scores">
       <h3>Player One</h3>
       <div>
-        <span>0</span>
+        <span id="player-one-total">0</span>
       </div>
     </div>
     <div class="scores">
       <h3>Tie</h3>
       <div>
-        <span>0</span>
+        <span id="tie-total">0</span>
       </div>
     </div>
     <div class="scores">
       <h3>Player Two</h3>
       <div >
-        <span>0</span>
+        <span id="player-two-total">0</span>
       </div>
     </div>
   </section>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
   <script type="text/javascript" src="scripts/logic.js"></script>
   <script type="text/javascript" src="scripts/user_interaction.js"></script>
 </body>
