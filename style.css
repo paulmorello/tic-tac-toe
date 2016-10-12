@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
-  background-color: #1EB5FC;
+  background-image: url(background.png);
   color: white;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
 }
 
 table {
@@ -22,7 +24,6 @@ table, th, td {
 th, td {
   width: 60px;
   height: 60px;
-  text-align: center;
 }
 
 th, td {
@@ -31,17 +32,17 @@ th, td {
 }
 
 .display {
-  border: 1px solid white;
+  border-bottom: 3px solid white;
   padding: 25px;
   width: 34%;
   position: relative;
   left: 29%;
   margin: 20px 20px 40px 20px;
+  font-size: 2em;
 }
 
 section {
   width: 80%;
-  text-align: center;
 }
 
 .scores {
@@ -56,6 +57,5 @@ h3 {
 }
 
 span {
-  text-align: center;
   font-size: 3em;
 }

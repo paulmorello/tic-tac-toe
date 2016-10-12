@@ -9,7 +9,7 @@ var tieTotal = 0;
 
 var rowWinX = function() {
 
-  //if three row X win
+  // if three row X win
 
   for (var i = 0; i < square.length; i++) {
     if (square[0].innerHTML === 'x' && square[1].innerHTML === 'x' && square[2].innerHTML === 'x') {
@@ -119,8 +119,9 @@ var getWinner = function() {
 
     setTimeout(function() {
       $('.square').empty();
-      screenDisplay.innerHTML = 'Play Again? Player One Move.';
+      screenDisplay.innerHTML = 'Play Again?';
     }, 1000);
+    
     moves = 0;
     token = 'o';
   }
@@ -139,9 +140,73 @@ var getWinner = function() {
     moves = 0;
     token = 'o';
   }
-  
+
   else {
     return false;
   }
-
 }
+
+// var winningX = function() {
+//
+//   var boardData = [
+//     [square[0].innerHTML,square[1].innerHTML,square[2].innerHTML],
+//     [square[3].innerHTML,square[4].innerHTML,square[5].innerHTML],
+//     [square[6].innerHTML,square[7].innerHTML,square[8].innerHTML]
+//   ];
+//
+//   var win = {
+//     winX: ['x','x','x'],
+//     winO: ['o','o','o']
+//   }
+//
+//   for (var i = 0; i < boardData.length; i++) {
+//     if (boardData[i].join('') === win.winX.join('')) {
+//       return 'win';
+//     }
+//     else {
+//       return 'no match';
+//     }
+//   }
+// }
+//
+// var winningO = function() {
+//
+//   var boardData = [
+//     [square[0].innerHTML,square[1].innerHTML,square[2].innerHTML],
+//     [square[3].innerHTML,square[4].innerHTML,square[5].innerHTML],
+//     [square[6].innerHTML,square[7].innerHTML,square[8].innerHTML]
+//   ];
+//
+//   var win = {
+//     winX: ['x','x','x'],
+//     winO: ['o','o','o']
+//   }
+//
+//   for (var i = 0; i < boardData.length; i++) {
+//     if (boardData[i].join('') === win.winO.join('')) {
+//       return 'win';
+//     }
+//   }
+// }
+
+
+// // if three row X win
+// a = [
+//   ['x', 'x', 'x'],
+//   ['o', 'x', 'x'],
+//   ['x', 'o', 'x']
+// ];
+// win = ['x', 'x', 'x'];
+// for (var i = 0; i < a.length; i++) {
+//   if (a[i].join('') === win.join('')) {
+//     console.log('match!');
+//   } else {
+//     console.log('no match...');
+//   }
+// }
+//
+// a = {
+//   letters: ['a', 'b', 'c'],
+//   fruit: ['apple', 'sj', 'sdf'],
+//   something: ['SJ', 'SDF', 'sdf']
+// }
