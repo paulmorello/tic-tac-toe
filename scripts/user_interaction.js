@@ -1,7 +1,7 @@
 //declare the player token
 var token = 'o';
 
-// total moves played
+// total moves played, to determine a tie
 var moves = 0;
 
 // find the display
@@ -12,6 +12,7 @@ setTimeout(function() {
   screenDisplay.innerHTML = 'It\'s Player One\'s Turn';
 }, 1000);
 
+//  updates display to tell user who's turn it is
 var userDisplay = function() {
 
   // changes display on top of the screen depending on user
@@ -33,29 +34,38 @@ var userDisplay = function() {
 // check for a tie
 var checkTie = function() {
 
-  // check made moves
+  // check made moves to determine a tie
   moves += 1;
-  if (getWinner() === false) {
-    getWinner();
+
+  // should no winner be found, run the update winner function again
+  if (updateWinner() === false) {
+    updateWinner();
+
+    // if moves is at 9, the game is declared a tie
     if (moves === 9) {
       tieTotal += 1;
       $('#tie-total').html(tieTotal);
       screenDisplay.innerHTML = 'This Game is a Tie!';
 
+      // empty squares and remove board to start a new game
       setTimeout(function() {
         $('.square').empty();
+        $('table').fadeOut('fast');
+      }, 300);
+      setTimeout(function() {
         screenDisplay.innerHTML = 'Play Again?';
-      }, 2000);
+      }, 1100);
       setTimeout(function() {
-        $('.square').empty();
+        $('table').fadeIn('fast');
         screenDisplay.innerHTML = 'Player One, it\'s your move!';
-      }, 4000);
+      }, 2000);
       moves = 0;
       token = 'o';
     }
   }
 }
 
+// event listeners, runs functions on each users click
 $('tbody').on('click', '.square', function(event) {
 
   // update the display, value in the square and check for a tie

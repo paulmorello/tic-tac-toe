@@ -9,6 +9,10 @@ body {
   animation: bounceIn 2s;
 }
 
+#game-board {
+  height: 385px;
+}
+
 table {
   margin: auto;
   table-layout: fixed;
