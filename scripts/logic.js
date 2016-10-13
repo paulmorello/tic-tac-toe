@@ -1,3 +1,4 @@
+
 // find squares on the board
 var square = $('.square');
 
@@ -117,11 +118,15 @@ var getWinner = function() {
     $('#player-one-total').html(playerOneTotal);
     screenDisplay.innerHTML = 'Player One Wins';
 
+
     setTimeout(function() {
       $('.square').empty();
       screenDisplay.innerHTML = 'Play Again?';
-    }, 1000);
-    
+    }, 2000);
+    setTimeout(function() {
+      $('.square').empty();
+      screenDisplay.innerHTML = 'Player One, it\'s your move!';
+    }, 4000);
     moves = 0;
     token = 'o';
   }
@@ -131,12 +136,16 @@ var getWinner = function() {
     // update player Two total score
     playerTwoTotal += 1;
     $('#player-two-total').html(playerTwoTotal);
-    screenDisplay.innerHTML = 'Player One Wins';
+    screenDisplay.innerHTML = 'Player Two Wins';
 
     setTimeout(function() {
       $('.square').empty();
-      screenDisplay.innerHTML = 'Play Again? Player One Move.';
-    }, 1000);
+      screenDisplay.innerHTML = 'Play Again?';
+    }, 2000);
+    setTimeout(function() {
+      $('.square').empty();
+      screenDisplay.innerHTML = 'Player One, it\'s your move!';
+    }, 4000);
     moves = 0;
     token = 'o';
   }

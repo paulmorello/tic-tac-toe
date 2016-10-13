@@ -2,10 +2,11 @@
 
 body {
   box-sizing: border-box;
-  background-image: url(background.png);
-  color: white;
+  color: #404040;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
+  background-image: url(background.png);
+  animation: bounceIn 2s;
 }
 
 table {
@@ -16,7 +17,7 @@ table {
 }
 
 table, th, td {
-  border: 2px solid white;
+  border: 2px solid #404040;
   border: collapse;
   border-spacing: 0;
 }
@@ -24,21 +25,23 @@ table, th, td {
 th, td {
   width: 60px;
   height: 60px;
-}
-
-th, td {
   padding: 30px;
   font-size: 3em;
 }
 
+th:hover, td:hover {
+  background-color: #4CC3D9;
+}
+
 .display {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #4CC3D9;
   padding: 25px;
   width: 34%;
   position: relative;
   left: 29%;
   margin: 20px 20px 40px 20px;
   font-size: 2em;
+  color: #404040;
 }
 
 section {
@@ -54,8 +57,26 @@ section {
 }
 
 h3 {
+  font-weight: bold;
+  color: #404040;
 }
 
 span {
   font-size: 3em;
+  color: #4CC3D9;
+}
+
+span:hover {
+  color: #404040;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
