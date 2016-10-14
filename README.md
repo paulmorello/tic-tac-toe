@@ -1,7 +1,7 @@
 #Tic-Tac-Toe
 
 Tic tac toe is a game with two players that are aiming to connect three of the
-of the same tokens.
+of the same tokens. Players can click the red stopwatch in the top right corner to start a speed round. They are given 10s to find a winner.
 
 ## Installation guide:
 Go to this link to play the game: [Game Link](https://paulmorello.github.io/tic-tac-toe/)
@@ -33,7 +33,7 @@ After the game logic was completed and the game worked, I upgraded my CSS and st
 The final refactor of my JavaScript file was most if/else statements and replacing them with a multi-dimensional array that grabbed the variables from the DOM.
 
 ## Future Additions to the Game:
-In the future I would like to add more functionality and features, such as AI or game timer.
+In the future I would like to add more functionality and features, such as AI.
 
 ## Conclusion
 
