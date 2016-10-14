@@ -26,8 +26,6 @@ First, I set up my HTML boilerplate and very basic css so I could see and visual
 
 Initially I decided to code the program entirely with JavaScript, to better understand the language. I used a number of large if/else statements and functions to determine the winner of a row, column or diagonal. This was split into two JS files, splitting up the game logic and user interactions.
 
-The initial approach became too large and difficult to navigate through when problems occured. To combat this, I decided to implement Jquery to eliminate the multiple event listener functions called.
-
 After the game logic was completed and the game worked, I upgraded my CSS and styles to a minimum level, upgrading the background colors and fonts. After completing the styling, I refactored my code again eliminating many unnecessary global variables and condensing my code further with loops and Jquery.
 
 The final refactor of my JavaScript file was most if/else statements and replacing them with a multi-dimensional array that grabbed the variables from the DOM.
