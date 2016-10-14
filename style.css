@@ -9,6 +9,25 @@ body {
   animation: bounceIn 2s;
 }
 
+img {
+  width: 30px;
+  height: 30px;
+}
+
+a {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px 50px 50px 50px;
+  padding: 15px;
+  border: 2px solid #404040;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #404040;
+  font-weight: bold;
+  background-color: red;
+}
+
 #game-board {
   height: 385px;
 }
@@ -39,7 +58,7 @@ th:hover, td:hover {
 
 .display {
   border-bottom: 3px solid #4CC3D9;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
   width: 34%;
   position: relative;
   left: 29%;
